@@ -35,7 +35,7 @@ public class FruitController {
     @PostMapping ("/insert/new")
     public String insertFruit (@RequestBody Fruit fruit) {
         fruitService.insertFruit( fruit);
-        return "se agrego la fruta (Manzana) de precio 20";
+        return "operacion exitosa";
 
     }
 
