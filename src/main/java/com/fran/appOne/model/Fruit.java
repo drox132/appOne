@@ -1,12 +1,13 @@
 package com.fran.appOne.model;
 
-import org.springframework.data.annotation.Id;
+
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "fruit")
+@Table(name = "FRUIT")
 public class Fruit {
 
     @Id
