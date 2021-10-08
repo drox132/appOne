@@ -21,6 +21,6 @@ public interface FruitRepository extends JpaRepository <Fruit,Integer>  {
     Fruit selectFruitById (@Param("idVariable") int id);
 
 
-    @Query(value = "INSERT INTO fruit (name,price) values ( :nameVariable , :priceVariable ) ",nativeQuery = true)
-    void insertFruit (@Param("nameVariable") String name, @Param("priceVariable") int price );
+    @Query(value = "Exec CreateAndSelectFruit @name = :nameVariable , @price = :priceVariable ",nativeQuery = true)
+    Fruit insertFruit (@Param("nameVariable") String name, @Param("priceVariable") int price );
 }
