@@ -34,8 +34,8 @@ public class FruitController {
 
     @PostMapping ("/insert/new")
     public String insertFruit (@RequestBody Fruit fruit) {
-        fruitService.insertFruit( fruit);
-        return "operacion exitosa";
+        String respuestaDelServiceultimaFruta = fruitService.insertFruit( fruit);
+        return respuestaDelServiceultimaFruta;
 
     }
 

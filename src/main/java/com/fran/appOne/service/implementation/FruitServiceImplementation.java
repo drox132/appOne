@@ -29,8 +29,10 @@ public class FruitServiceImplementation implements FruitService {
     }
 
     @Override
-    public void insertFruit(Fruit fruit) {
-        fruitRepository.insertFruit(fruit.getName(), fruit.getPrice());
+    public String insertFruit(Fruit fruit) {
 
+        Fruit ultimaFruta= fruitRepository.insertFruit(fruit.getName(), fruit.getPrice());
+
+        return "Se ha guardado la Fruta " + ultimaFruta.getName() + " con el precio " .concat(String.valueOf(ultimaFruta.getPrice()));
     }
 }

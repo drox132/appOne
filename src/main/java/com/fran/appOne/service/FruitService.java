@@ -10,6 +10,6 @@ public interface FruitService {
 
     Fruit selectFruitById (int id);
 
-    void insertFruit ( Fruit fruit);
+    String insertFruit ( Fruit fruit);
 
 }
